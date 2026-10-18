@@ -1,0 +1,77 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Archivo', system-ui, sans-serif;
+  --font-sans: 'Archivo', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --color-paper: #f4f3ec;
+  --color-paper-dim: #e8e6db;
+  --color-ink: #14170f;
+  --color-ink-soft: #5b5f52;
+  --color-good: #00a859;
+  --color-good-deep: #00723c;
+  --color-tag: #ffd500;
+  --color-alert: #d8391f;
+  --color-alert-deep: #a32b16;
+  --color-brblue: #0b3aa8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-paper text-ink font-sans antialiased;
+}
+
+/* headline e etiquetas usam o eixo de largura do Archivo */
+.stretch-wide {
+  font-stretch: 125%;
+}
+.stretch-cond {
+  font-stretch: 72%;
+}
+
+::selection {
+  background: var(--color-tag);
+  color: var(--color-ink);
+}
+
+/* fita de preços no topo */
+@keyframes tape {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.tape-track {
+  animation: tape 150s linear infinite;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.rise {
+  animation: rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tape-track,
+  .rise,
+  .animate-pulse {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
