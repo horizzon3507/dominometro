@@ -2,7 +2,7 @@
 
 preço de domínio sem pegadinha.
 
-Comparador de preço de domínio para brasileiros — [dominios.hory.one](https://dominios.hory.one) · [repo](https://github.com/horizzon3507/dompricing)
+Comparador de preço de domínio para brasileiros — [dominios.hory.one](https://dominios.hory.one) · [repo](https://github.com/horizzon3507/dominometro)
 
 ## o que faz
 
